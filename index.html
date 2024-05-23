@@ -3,50 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - University of Prizren</title>
+    <title>University of Prizren</title>
     <link rel="stylesheet" href="styles.css">
+    <style> 
+        .logo{
+          width: 250px;
+          height: 100px;
+          transition: width 2s, height 4s;
+          
+        }
+        
+        .logo:hover {
+          width: 500px;
+          height: 120px;
+        }
+    
+        </style>
+        
 </head>
 <body>
+   
     <header>
-        <div class="container">
-            <img class="logo" src="logo.png">
-            <h1>Universiteti "Ukshin Hoti" Prizren</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html"Home>Faqja Kryesore</a></li>
+        <img class="logo" src="logo.png">
+        <h1>Universiteti "Ukshin Hoti" Prizren</h1>
+        <nav>
+            <ul>
+              
+                <li><a href="about.html">Rreth nesh</a ></li>
                 <li><a href="programs.html">Programet</a></li>
                 <li><a href="admissions.html">Aplikimi</a></li>
                 <li><a href="contact.html">Kontakti</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
- 
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Rreth Nesh</h2>
-            <br>
-            <p>Universiteti “Ukshin Hoti” me seli në Prizren, është themeluar me vendim nr. 01/87 të Qeverisë së Republikës së Kosovës më 09.10.2009 si universiteti i dytë publik në Republikën e Kosovës i cili filloi me gjeneratën e parë të studentëve në vitin akademik 2009/10, përkatësisht 01.10.2010.
-
-                Kuvendi i Republikës së Kosovës më 30.05.2013 miratoi Statutin e Universitetit “Ukshin Hoti” me seli në Prizren.
                 
-                Universiteti “Ukshin Hoti” me gjashtë njësitë e tij akademike aktualisht ofron studime Bachelor dhe Master dhe me statut i njëjti mund të organizojë studime të doktoratës. Përveç studimeve në gjuhën shqipe, Universiteti ofron edhe studime në gjuhën turke dhe boshnjake..</p>
-            <br><p>Universiteti trashëgon përvojën e ish-Shkollës së Lartë Pedagogjike, degë e Prishtinës, e cila funksionon që nga tetori i vitit 1961, më vonë u shndërrua në degë të Fakultetit të Edukimit në Prizren dhe tani në Universitetin “Ukshin Hoti” Prizren.
+                
+            </ul>
+        </nav>
+    </header>
+    <h2>Double Click to chanche the photo</h2>
 
-                Qyteti i Prizrenit, selia e këtij universiteti, me ligjin nr. 06L / -012 nenet 4 pika 2 është shpallur Kryeqyteti Historik i Republikës së Kosovës, i cili normalisht njihet jo vetëm për historinë e pasur por edhe për multietnicitetin, trashëgiminë dhe kulturën e tij jo vetëm në Republikën e Kosovës por edhe përtej.</p>
-            <br><p>Qyteti i Prizrenit është gjithashtu qyteti i dytë më i madh pas Prishtinës, i cili sipas statistikave është qyteti më i vizituar në vend, shtrihet në pjesën jugore të Republikës së Kosovës, duke qenë qyteti më i afërt me Republikën e Shqipërisë për qytetarët. qyteti i të cilit dhe universiteti “Ukshin Hoti” janë shumë tërheqës dhe tërheqës.</p>
-            <p>Universiteti “Ukshin Hoti” Prizren (UPZ) ka filluar punën në vitin 2010 pas vendimit për themelim të nxjerrë nga Qeveria e Kosovës. Selia e Universitetit është në Prizren, i cili është një nga qytetet më të lashta të Kosovës. UPZ është universiteti i dytë publik në Kosovë. Në vitin 2010 numri i studentëve të regjistruar ishte 1700, ndërsa në vitin 2020; numri i studentëve të regjistruar është rreth 4035 studentë aktivë. Universiteti është i akredituar që nga viti 2010. Së fundmi ka qenë në proces akreditimi dhe është ri-akredituar. Aktualisht Universiteti ofron studime në nivelin Bachelor dhe Master.</p>
-            
-        </div>
+
+<img id="myImage" src="photo1.jpg" width="200" height="200" ondblclick="changePhoto()">
+
+<script>
+var imageIndex = 1;
+
+function changePhoto() {
+  var image = document.getElementById("myImage");
+  
+  
+  var images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+  
+ 
+  image.src = images[imageIndex];
+  
+ 
+  imageIndex++;
+  
+  if (imageIndex >= images.length) {
+    imageIndex = 0;
+  }
+}
+</script>
+   
+    <section id="about">
+        <h2>Rreth nesh</h2>
+        <p>Mirë se vini në Universitetin e Prizrenit, një institucion lider i dedikuar për përsosmërinë akademike dhe shërbimin ndaj komunitetit.</p>
     </section>
 
+    <section id="programs">
+        <h2>Programet</h2>
+        <p>Eksploroni gamën tonë të gjerë të programeve universitare dhe pasuniversitare të krijuara për të përmbushur nevojat e studentëve tanë.</p>
+    </section>
+
+    <section id="admissions">
+        <h2>Pranimi i studeteve</h2>
+        <p>Mësoni rreth procesit tonë të pranimit, kërkesat dhe afatet për studentët e ardhshëm.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Keni pyetje apo keni nevojë për ndihmë? Na kontaktoni me telefon, email ose vizitoni kampusin tonë.</p>
+    </section>
+    <section id="login">
+        <h2>LogIn</h2>
+        <p>"Shtoni më shumë nga përvoja universitare! Regjistrohuni ose bëni log-in tani për të patur akses të plotë në shërbimet tona të përshtatura dhe për të marrë përfitimet e plota nga resurset e ofruara në Universitetin e Prizrenit.</p>
+    </section>
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <p>"Objektet e Fakultetit Ukshin Hoti ofrojnë një ambient të përsosur për zhvillimin e talentit tuaj dhe përmbushjen e ëndrrave të arsimit të lartë. Përjetoni një udhëtim të frytshëm drejt suksesit në një mjedis të përkushtuar për shkencën dhe njohuritë e reja."</p>
+    </section>
+    <br>
+    <br>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2024 University of Prizren. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 University of Prizren. All rights reserved.</p>
     </footer>
+    
+
 </body>
 </html>
