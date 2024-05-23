@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Prizren</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> 
+        .logo{
+          width: 250px;
+          height: 100px;
+          transition: width 2s, height 4s;
+          
+        }
+        
+        .logo:hover {
+          width: 500px;
+          height: 120px;
+        }
+    
+        </style>
+        
+</head>
+<body>
+   
+    <header>
+        <img class="logo" src="logo.png">
+        <h1>Universiteti "Ukshin Hoti" Prizren</h1>
+        <nav>
+            <ul>
+              
+                <li><a href="about.html">Rreth nesh</a ></li>
+                <li><a href="programs.html">Programet</a></li>
+                <li><a href="admissions.html">Aplikimi</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <h2>Double Click to chanche the photo</h2>
+
+
+<img id="myImage" src="photo1.jpg" width="200" height="200" ondblclick="changePhoto()">
+
+<script>
+var imageIndex = 1;
+
+function changePhoto() {
+  var image = document.getElementById("myImage");
+  
+  
+  var images = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+  
+ 
+  image.src = images[imageIndex];
+  
+ 
+  imageIndex++;
+  
+  if (imageIndex >= images.length) {
+    imageIndex = 0;
+  }
+}
+</script>
+   
+    <section id="about">
+        <h2>Rreth nesh</h2>
+        <p>Mirë se vini në Universitetin e Prizrenit, një institucion lider i dedikuar për përsosmërinë akademike dhe shërbimin ndaj komunitetit.</p>
+    </section>
+
+    <section id="programs">
+        <h2>Programet</h2>
+        <p>Eksploroni gamën tonë të gjerë të programeve universitare dhe pasuniversitare të krijuara për të përmbushur nevojat e studentëve tanë.</p>
+    </section>
+
+    <section id="admissions">
+        <h2>Pranimi i studeteve</h2>
+        <p>Mësoni rreth procesit tonë të pranimit, kërkesat dhe afatet për studentët e ardhshëm.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Keni pyetje apo keni nevojë për ndihmë? Na kontaktoni me telefon, email ose vizitoni kampusin tonë.</p>
+    </section>
+    <section id="login">
+        <h2>LogIn</h2>
+        <p>"Shtoni më shumë nga përvoja universitare! Regjistrohuni ose bëni log-in tani për të patur akses të plotë në shërbimet tona të përshtatura dhe për të marrë përfitimet e plota nga resurset e ofruara në Universitetin e Prizrenit.</p>
+    </section>
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <p>"Objektet e Fakultetit Ukshin Hoti ofrojnë një ambient të përsosur për zhvillimin e talentit tuaj dhe përmbushjen e ëndrrave të arsimit të lartë. Përjetoni një udhëtim të frytshëm drejt suksesit në një mjedis të përkushtuar për shkencën dhe njohuritë e reja."</p>
+    </section>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 University of Prizren. All rights reserved.</p>
+    </footer>
+    
+
+</body>
+</html>
